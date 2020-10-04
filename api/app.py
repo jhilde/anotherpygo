@@ -6,7 +6,7 @@ app = Flask(__name__)
 @app.route('/')
 def welcome():
     # return a json
-    return jsonify({'status': 'api working'})
+    return jsonify({'status': 'api working..hope'})
 
 if __name__ == '__main__':
     #define the localhost ip and the port that is going to be used
