@@ -39,6 +39,18 @@ jobs:
           root: .
           paths:
             - docker-image
+      - run:
+          name: run tests
+          command: |
+            pipenv shell
+            mkdir test-results
+            pytest --junitxml=test-results/junit.xml
+
+      - store_test_results:
+          path: test-results
+    
+      - store_artifacts:
+          path: test-results    
 workflows:
   build-deploy:
     jobs:
