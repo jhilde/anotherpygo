@@ -47,7 +47,7 @@ jobs:
       - run:
             name: Run Tests
             command: |
-              mkdir test-results
+              mkdir -p test-results
               pipenv run coverage run -m pytest --junitxml=test-results/junit.xml
               pipenv run coverage report
               pipenv run coverage html  # open htmlcov/index.html in a browser
