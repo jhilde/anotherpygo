@@ -44,11 +44,19 @@ jobs:
           command: |
             mkdir test-results
             pipenv run pytest --junitxml=test-results/junit.xml
+      - run:
+            name: Run Tests
+            command: |
+              mkdir test-results
+              pipenv run coverage run -m pytest --junitxml=test-results/junit.xml
+              pipenv run coverage report
+              pipenv run coverage html  # open htmlcov/index.html in a browser
       - store_test_results:
-          path: test-results
-    
+            path: test-results
       - store_artifacts:
-          path: test-results    
+            path: htmlcov
+      - store_artifacts:
+            path: test-results    
 workflows:
   build-deploy:
     jobs:

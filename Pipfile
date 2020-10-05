@@ -8,6 +8,7 @@ verify_ssl = true
 [packages]
 flask = "*"
 pytest = "*"
+coverage = "*"
 
 [requires]
 python_version = "3.8.3"

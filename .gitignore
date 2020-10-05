@@ -1,4 +1,6 @@
 iac/terraform.tfstate
 iac/terraform.tfvars
-iac/.terraform/plugins/selections.json
-iac/.terraform/plugins/registry.terraform.io/hashicorp/aws/2.70.0/darwin_amd64/terraform-provider-aws_v2.70.0_x4
+iac/.terraform/**/*
+.coverage
+htmlcov/**/*
+test-results/*
